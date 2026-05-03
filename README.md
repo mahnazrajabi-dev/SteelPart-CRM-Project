@@ -69,8 +69,20 @@ A full end-to-end Salesforce Sales Cloud CRM implementation for a fictional B2B 
 ---
 
 ## 📸 Screenshots
-*(Screenshots coming soon)*
+### Opportunities Pipeline
+![Pipeline Report](pipeline-report.png)
 
+### Price Book
+![Price Book](price-book.png)
+
+### Opportunity Record with Products
+![Opportunity Record](opportunity-record.png)
+
+### Flow Builder Automation
+![Flow Builder](flow-builder.png)
+
+### Accounts List
+![Accounts List](accounts-list.png)
 ---
 
 ## 👩‍💼 About Me
