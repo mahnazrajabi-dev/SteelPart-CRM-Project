@@ -96,12 +96,18 @@ requiring manager sign-off before closing.
 
 
 ## 🛠 Salesforce Features Used
+
 - Leads & Lead Conversion
 - Accounts, Contacts, Opportunities
 - Products & Price Books
 - Flow Builder (Record-Triggered Flow)
+- Flow Builder (Screen Flow)
 - Reports & Dashboards
 - Lightning App Builder
+- Validation Rules
+- Permission Sets
+- Approval Processes
+- Process Automation
 
 ## 🎯 Skills Demonstrated
 - Salesforce Sales Cloud configuration
