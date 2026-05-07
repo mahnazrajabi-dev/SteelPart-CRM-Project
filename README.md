@@ -47,7 +47,53 @@ A full end-to-end Salesforce Sales Cloud CRM implementation for a fictional B2B 
 - Columns: Account Name, Opportunity Name, Stage, Amount, Close Date, Probability
 - Full pipeline visibility for sales management
 
----
+### 6. Validation Rules
+
+| Rule Name | Object | Business Logic | Error Message |
+|---|---|---|---|
+| Minimum Order Value | Opportunity | Amount < 500 | "Minimum order value is 500 PLN" |
+| Close Date Not In Past | Opportunity | Close Date cannot be in past when Stage is Prospecting or Qualification | "Close Date cannot be in the past for active opportunities" |
+| Opportunity Name Must Include Year | Opportunity | Name must contain 2024, 2025 or 2026 | "Opportunity Name must include the year (e.g. Q1 2025 - Voestalpine)" |
+
+📸 Screenshot: `validation-rules.png`
+
+### 7. Permission Set — SteelParts Sales Rep
+
+Created a Permission Set to control access for sales 
+representatives in the SteelParts org.
+
+- Read + Edit on Opportunities
+- Read + Edit on Contacts
+- Read only on Accounts
+- No delete permissions on any object
+
+📸 Screenshot: `permission-set.png`
+
+### 8. Screen Flow — New Parts Inquiry
+
+Built a Screen Flow to capture inbound parts inquiries 
+and automatically create a Lead record.
+
+- Screen 1: collects Company Name, Contact Name, 
+  Product Interest, Urgency Level
+- Creates Lead record automatically with LeadSource = Web
+- Screen 2: confirmation message to user
+- Flow activated and tested end to end
+
+📸 Screenshot: `screen-flow.png`
+
+### 9. Approval Process — Large Order Approval
+
+Built an Approval Process for high-value opportunities 
+requiring manager sign-off before closing.
+
+- Triggered when Opportunity Amount exceeds 10,000 PLN
+- Approved: Stage updates to Closed Won
+- Rejected: Stage updates to Needs Review
+- Email alert sent to opportunity owner on rejection
+
+📸 Screenshot: `approval-process.png
+
 
 ## 🛠 Salesforce Features Used
 - Leads & Lead Conversion
@@ -56,8 +102,6 @@ A full end-to-end Salesforce Sales Cloud CRM implementation for a fictional B2B 
 - Flow Builder (Record-Triggered Flow)
 - Reports & Dashboards
 - Lightning App Builder
-
----
 
 ## 🎯 Skills Demonstrated
 - Salesforce Sales Cloud configuration
